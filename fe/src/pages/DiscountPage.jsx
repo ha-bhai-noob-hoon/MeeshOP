@@ -3,8 +3,8 @@ import React, { useState }from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DashboardCard from '../components/DashboardCard';
-import img1 from "../assets/discount1.png";
-import img2 from "../assets/discount2.png";
+import img1 from "../assets/dsc1.png";
+import img2 from "../assets/dsc2.png";
 
 
 const DiscountPage = () => {
