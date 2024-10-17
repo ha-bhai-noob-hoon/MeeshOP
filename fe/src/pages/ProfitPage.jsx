@@ -20,7 +20,7 @@ const PricingStrategy = () => {
 
   const skus = ['SKU1', 'SKU2', 'SKU3', 'SKU4', 'SKU5']; // Example SKUs
   const days = ['BAU', 'FSMS', 'MBS', 'MDS']; // Days of the week
-  const strategies = ['FSMS', 'MBS', 'Price Match', 'Deal of the Day']; // Example strategies
+  const strategies = ['No Discount', 'Max Discount', 'Price Increase', 'Min Discount', 'Penetration Pricing']; // Example strategies
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -121,8 +121,8 @@ const PricingStrategy = () => {
                     <div className="bg-purple-800 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl">
                       {selectedDay}
                     </div>
-                    <p className="mt-4 text-xl font-bold">Strategy Name: {strategy}</p>
-                    <p className="mt-1">$x.99</p> {/* Example price strategy */}
+                    <p className="mt-4 text-xl font-bold">Strategy: {strategy}</p>
+                    {/* <p className="mt-1">$x.99</p> Example price strategy */}
                   </div>
                 }
               />
@@ -154,3 +154,11 @@ export default PricingStrategy;
       // };
       
       // export default ProfitPage;
+
+      //  f"No discount (maintain price)",
+//         1: f"Small discount ({small_discount}% off)",
+//         2: f"Large discount ({large_discount}% off)",
+//         3: "Price increase (price skimming)",
+//         4: "Penetration Pricing (low price to enter market)",
+//         5: "Psychological Pricing (price just below a round number)",
+//         6: "Freemium Pricing (offer free tier with paid options)"
