@@ -20,7 +20,7 @@ const PricingStrategy = () => {
 
   const skus = ['SKU1', 'SKU2', 'SKU3', 'SKU4', 'SKU5']; // Example SKUs
   const days = ['BAU', 'FSMS', 'MBS', 'MDS']; // Days of the week
-  const strategies = ['No Discount', 'Max Discount', 'Price Increase', 'Min Discount', 'Penetration Pricing']; // Example strategies
+  const strategies = ['No Discount', 'Max Discount', 'Nearest 99', 'Min Discount', 'Price Skimming']; // Example strategies
 
   const handleSubmit = (e) => {
     e.preventDefault();
