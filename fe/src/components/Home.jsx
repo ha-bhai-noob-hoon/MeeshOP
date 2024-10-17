@@ -6,6 +6,11 @@ import DashboardCard from './DashboardCard';
 import TranslateSection from './TranslateSection';
 import ChatBubble from './ChatBubble';
 import Footer from "./Footer";
+import sku1 from "../assets/sku1.jpg";
+import sku2 from "../assets/sku2.jpg";
+import sku3 from "../assets/sku3.jpg";
+
+
 
 const Home = () => {
   return (
@@ -14,7 +19,7 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Inventory Status Card */}
         <DashboardCard
-          title="Inventory Status"
+          title="Inventory Projection"
           content={
             <div className="mt-4 flex items-center space-x-4">
               {/* Circle Chart */}
@@ -47,7 +52,7 @@ const Home = () => {
                 </svg>
               </div>
               {/* Revenue Info */}
-              <div className="text-gray-700">
+              <div className="text-gray-700 font-bold">
                 <p>₹ 4,91,658 - Maximum Revenue (BAU)</p>
                 <p>₹ 48,28,051 - Maximum Revenue (FSMS)</p>
               </div>
@@ -60,13 +65,24 @@ const Home = () => {
         {/* Similar DashboardCards for other sections */}
         {/* Auto-SARIMA Chart Card */}
         <DashboardCard
-          title="Auto-SARIMA Inventory Projection"
+          title="Current Inventory Status"
           content={
-            <div className="mt-4">
-              <img src="static/images/chart.png" alt="SARIMA Chart" className="w-full h-auto" />
+            <div className="mt-4 text-gray-700 flex justify-between font-bold">
+              <span className='ml-4'>
+              <p>106 - SKU 1</p>
+              <p>430 - SKU 2</p>
+              <div>
+                
+              </div>
+              </span>
+              <span  className='mr-4'>
+              <p>97 - SKU 3</p>
+              <p>189 - SKU 4</p>
+              </span>
+             
             </div>
           }
-          linkText="Go to SARIMA Page"
+          linkText="Go to Status Page"
           linkUrl="/sarima"
         />
 
@@ -74,7 +90,7 @@ const Home = () => {
         <DashboardCard
           title="Calculated Event Sales Multiplier"
           content={
-            <div className="flex justify-between mt-4">
+            <div className="flex justify-between mt-4 font-bold">
               <div className="text-center">
                 <p className="text-4xl font-bold text-purpleCustom">≈ 3.8</p>
                 <p className="text-gray-600">Recommended for FSMS</p>
@@ -91,14 +107,14 @@ const Home = () => {
 
         {/* Profit Values Card */}
         <DashboardCard
-          title="Optimal Profit Values for Discounts"
+          title="Pricing Strategy and Revenue"
           content={
-            <div className="mt-4 text-gray-700">
+            <div className="mt-4 text-gray-700 font-bold">
               <p>Optimal Profit: ₹ 150,467.83</p>
               <p>Optimal Revenue: ₹ 432,120.50</p>
             </div>
           }
-          linkText="Go to Profit Page"
+          linkText="Go to Pricing Page"
           linkUrl="/profit"
         />
 
@@ -106,7 +122,7 @@ const Home = () => {
         <DashboardCard
           title="Recommended Discount Strategy"
           content={
-            <div className="mt-4 text-gray-700 flex justify-between">
+            <div className="mt-4 text-gray-700 flex justify-between font-bold">
               <span className='ml-4'>
               <p>10% - SKU 1</p>
               <p>4% - SKU 2</p>
@@ -126,10 +142,22 @@ const Home = () => {
         <DashboardCard
           title="FSMS - Real Time Insights"
           content={
-            <div className="mt-4 flex justify-between text-gray-700">
-              <p>Hottest Selling</p>
+            <div className="mt-4 flex justify-between text-gray-700 font-bold">
+              {/* <p>Hottest Selling</p>
               <p>Revenue Maximizer</p>
-              <p>Least Sold</p>
+              <p>Least Sold</p> */}
+              <span className='ml-4 justify-center'>
+              <p>Hottest Selling</p>
+              <img src={sku1} alt='sku1' className='w-12 h-12'/>
+              </span>
+              <span className='ml-4 justify-center'>
+              <p>Revenue Maximizer</p>
+              <img src={sku2} alt='sku2' className='w-12 h-12'/>
+              </span>
+              <span className='ml-4 justify-center'>
+              <p>Hottest Selling</p>
+              <img src={sku3} alt='sku3' className='w-12 h-12'/>
+              </span>
             </div>
           }
           linkText="Go to Insights Page"
