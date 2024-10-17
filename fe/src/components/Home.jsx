@@ -140,7 +140,7 @@ const Home = () => {
 
         {/* FSMS Insights Card */}
         <DashboardCard
-          title="FSMS - Real Time Insights"
+          title="Real Time Insights"
           content={
             <div className="mt-4 flex justify-between text-gray-700 font-bold">
               {/* <p>Hottest Selling</p>
